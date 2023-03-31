@@ -1,0 +1,47 @@
+{
+	"name": "watchthis",
+	"version": "1.0.0",
+	"description": "Watch this est un projet étudiant français pour créer un tracker de statistiques de jeux pour Valorant de Riot Games. L'objectif est de fournir des informations de jeu détaillées.",
+	"scripts": {
+		"test": "jest",
+		"prettier": "prettier --write .",
+		"dev": "next dev"
+	},
+	"jest": {
+		"preset": "ts-jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MehayeClem/WatchThis.git"
+	},
+	"keywords": [
+		"WatchThis",
+		"Valorant",
+		"Riot",
+		"Riot Games",
+		"Tracker",
+		"Statistiques"
+	],
+	"author": "MehayeClem - SkynixFr",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/MehayeClem/WatchThis/issues"
+	},
+	"homepage": "https://github.com/MehayeClem/WatchThis#readme",
+	"dependencies": {
+		"next": "^13.2.4",
+		"prettier": "^2.8.7",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@jest/globals": "^29.5.0",
+		"@types/jest": "^29.5.0",
+		"@types/node": "^18.15.11",
+		"@types/react": "^18.0.31",
+		"jest": "^29.5.0",
+		"sass": "^1.60.0",
+		"ts-jest": "^29.0.5",
+		"typescript": "^5.0.3"
+	}
+}
