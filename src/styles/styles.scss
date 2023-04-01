@@ -3,7 +3,6 @@
 
 body {
 	font-family: var(--font-family);
-	font-size: clamp(1em, 2vw, 2.5em);
 
 	.header {
 		width: 100%;
@@ -12,5 +11,43 @@ body {
 		justify-content: center;
 		align-items: center;
 		background-color: #677efa;
+	}
+
+	.search-box {
+		width: 40%;
+		height: 200px;
+		margin: 2vw auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column;
+
+		input[type='search'] {
+			width: 80%;
+			height: 50px;
+			font-size: 1em;
+			border-radius: 10px;
+			padding: 1em;
+		}
+
+		.search-account {
+			width: 80%;
+			height: auto;
+			display: flex;
+			justify-content: center;
+			flex-flow: row;
+			padding: 1em 0 1em 0;
+
+			> span {
+				margin-right: 1em;
+			}
+
+			a {
+				&:hover {
+					text-decoration: underline;
+					color: #677efa;
+				}
+			}
+		}
 	}
 }
