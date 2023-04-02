@@ -97,8 +97,11 @@ ul {
 	list-style: none;
 }
 
-a,
 button {
 	all: inherit;
+	cursor: pointer;
+}
+
+a {
 	cursor: pointer;
 }
