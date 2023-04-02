@@ -4,7 +4,7 @@
 body {
 	font-family: var(--font-family);
 	font-size: clamp(1em, 1.5vw, 1.2em);
-
+	background-color: #1e1e1e;
 	.header {
 		width: 100%;
 		height: 100px;
@@ -73,6 +73,218 @@ body {
 				&:hover {
 					color: #fff;
 					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	.profil {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr auto;
+		grid-template-areas:
+			'banner banner banner banner'
+			'rank career career career'
+			'statistique historic historic historic'
+			'none historic historic historic';
+		grid-auto-flow: column;
+
+		.profil-banner {
+			grid-area: banner;
+			width: 90%;
+			height: 150px;
+			margin: 2em auto;
+			display: flex;
+			align-items: center;
+			background-color: #d9d9d9;
+			border-radius: 15px;
+			padding-left: 30px;
+			font-size: 1.5em;
+		}
+
+		.profil-rank {
+			grid-area: rank;
+			width: 60%;
+			margin: 1em auto;
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			background-color: #d9d9d9;
+			border-radius: 15px;
+			padding: 1em;
+			gap: 1em;
+
+			> h2 {
+				font-size: 1.5em;
+				font-weight: bold;
+			}
+
+			.rank-act {
+				width: 100%;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				font-weight: 700;
+
+				.arrow-left,
+				.arrow-right {
+					width: 30px;
+					height: 30px;
+				}
+			}
+
+			.rank-infos {
+				width: 100%;
+				display: flex;
+				justify-content: space-around;
+
+				.rank-img {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-flow: column;
+				}
+
+				.rank-circle {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+		}
+
+		.profil-career {
+			grid-area: career;
+			color: white;
+			margin: 1em 0 1em 0;
+			padding: 1em 0 0 0;
+			gap: 1em;
+			display: flex;
+			flex-flow: column;
+
+			> h2 {
+				font-size: 1.5em;
+				font-weight: bold;
+			}
+
+			.career-list {
+				width: 33%;
+				display: flex;
+				justify-content: space-around;
+				color: black;
+
+				.career-name {
+					width: 150px;
+					padding: 0.5em;
+					border-radius: 15px;
+					background-color: #d9d9d9;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+		}
+
+		.profil-historic {
+			grid-area: historic;
+			color: white;
+
+			> h3 {
+				font-weight: bold;
+				font-size: 1em;
+			}
+
+			.profil-party {
+				width: 93.3%;
+				background-color: #141414;
+				display: flex;
+				align-items: center;
+				margin: 1em 0 0 0;
+				padding: 1em 1em 1em 2em;
+				gap: 1em;
+				border-radius: 15px;
+				position: relative;
+
+				.logo-agent {
+					img {
+						width: 100px;
+						height: 100x;
+					}
+				}
+
+				.map-name {
+					font-size: 2em;
+					padding-right: 1em;
+				}
+
+				.party-kda {
+					display: flex;
+					flex-flow: column;
+				}
+
+				.party-result {
+					display: flex;
+					justify-content: right;
+					align-items: center;
+					width: 100%;
+					gap: 1em;
+
+					.party-result-name {
+						font-size: 2em;
+						color: #77ffc6;
+					}
+
+					.party-result-numbers {
+						font-size: 1.3em;
+
+						.number-left {
+							color: #77ffc6;
+						}
+
+						.number-right {
+							color: #df3939;
+						}
+					}
+				}
+
+				.party-date {
+					position: absolute;
+					top: 10px;
+					right: 15px;
+					font-size: 0.7em;
+				}
+			}
+		}
+
+		.profil-statistiques {
+			grid-area: statistique;
+			width: 60%;
+			margin: 1em auto;
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			background-color: #d9d9d9;
+			border-radius: 15px;
+			padding: 1em;
+			gap: 1em;
+
+			> h2 {
+				font-size: 1.5em;
+				font-weight: bold;
+			}
+
+			.statistique-list {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-flow: column;
+				gap: 1em;
+
+				.statistique {
+					> span {
+						padding: 0 0 0 0.5em;
+					}
 				}
 			}
 		}

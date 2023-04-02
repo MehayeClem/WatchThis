@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 
 import '../styles/styles.scss';
@@ -5,7 +6,6 @@ import '../styles/styles.scss';
 const App = () => {
 	return (
 		<>
-			<Header />
 			<div className="search-box">
 				<div className="search-bar">
 					<input
@@ -13,7 +13,7 @@ const App = () => {
 						placeholder="Rechercher un joueur pseudo#tag"
 					/>
 
-					<a className="search-arrow-box" href="/profil">
+					<Link className="search-arrow-box" to="/profil">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
@@ -28,7 +28,7 @@ const App = () => {
 								d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
 							/>
 						</svg>
-					</a>
+					</Link>
 				</div>
 
 				<div className="search-text">

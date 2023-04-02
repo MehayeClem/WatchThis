@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import App from './pages/App';
 import Profil from './pages/Profil';
+import Header from './components/Header';
 
 const container = document.getElementById('root');
 
@@ -19,4 +20,9 @@ const router = createBrowserRouter([
 	}
 ]);
 
-root.render(<RouterProvider router={router} />);
+root.render(
+	<>
+		<Header />
+		<RouterProvider router={router} />
+	</>
+);
