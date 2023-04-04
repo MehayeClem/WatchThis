@@ -353,4 +353,76 @@ body {
 			}
 		}
 	}
+
+	.agents-container {
+		width: 90%;
+		height: auto;
+		margin: 2em auto;
+		color: white;
+		display: flex;
+		flex-flow: column;
+
+		> h1 {
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+
+		.agent-grid {
+			width: 100%;
+			height: auto;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+
+			.agent-card {
+				margin: 2em auto;
+				width: 400px;
+				height: 500px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-flow: column;
+				position: relative;
+				outline: 1px solid #7399bf;
+				perspective: 1000px;
+
+				.agent-img {
+					width: 500px;
+					height: 500px;
+					transition: transform 0.5s;
+
+					&:hover {
+						transform: rotateY(-20deg) scale(1.1);
+					}
+				}
+
+				.agent-name {
+					position: absolute;
+					width: 100%;
+					bottom: 0;
+					left: 0;
+					padding: 0 0 0.5em 1em;
+					font-size: 2em;
+				}
+
+				.agent-name-vertical {
+					position: absolute;
+					transform: rotate(90deg);
+					top: 4.5em;
+					right: -1.25em;
+					font-size: 0.8em;
+
+					&::after {
+						content: '';
+						display: block;
+						width: 0.5rem;
+						height: 0.5rem;
+						background: #ff4655;
+						position: absolute;
+						right: -1.5rem;
+						bottom: calc(50% - 0.25rem);
+					}
+				}
+			}
+		}
+	}
 }
