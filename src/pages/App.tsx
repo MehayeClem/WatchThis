@@ -40,7 +40,6 @@ const App = () => {
 					</a>
 				</div>
 			</div>
-			<div>Hello world !</div>
 		</>
 	);
 };
